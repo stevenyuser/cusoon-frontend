@@ -10,7 +10,7 @@ interface BusCompanyReviewsProps {
 }
 
 async function getBusCompanyReviews(companyId: string) {
-    const res = await fetch(`http://0.0.0.0:8080/api/reviews/${companyId}/all`);
+    const res = await fetch(`http://cusoon-backend.vercel.app/api/reviews/${companyId}/all`);
     const data = await res.json();
 
     const busCompanyReviews: { [key: string]: Review } = data.data as { [key: string]: Review };

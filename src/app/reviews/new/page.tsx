@@ -33,7 +33,7 @@ export default function CreateReviewPage() {
 
         console.log("CREATING REVIEW: " + review);
 
-        await fetch("http://0.0.0.0:8080/api/reviews/create", {
+        await fetch("http://cusoon-backend.vercel.app/api/reviews/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

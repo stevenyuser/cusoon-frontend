@@ -5,7 +5,7 @@ import BusCompanyCard from "../../components/BusCompanyCard";
 import { BusCompany, BusCompanyEnum } from "../../../types";
 
 async function getAllBusCompanies() {
-    const res = await fetch("http://0.0.0.0:8080/api/companies");
+    const res = await fetch("http://cusoon-backend.vercel.app/api/companies");
     const data = await res.json();
 
     const busCompanies: { [key: string]: BusCompany } = data.data as { [key: string]: BusCompany };
