@@ -19,7 +19,7 @@ const validCompanies = ["OurBus", "C2C", "Flixbus", "Megabus"];
 // }
 
 async function getBusCompanyData(companyId: string): Promise<BusCompany | null> {
-    const res = await fetch(`http://cusoon-backend.vercel.app/api/companies/${companyId}`);
+    const res = await fetch(`https://cusoon-backend.vercel.app/api/companies/${companyId}`);
     const data = await res.json();
 
     const busCompany: BusCompany = data.data as BusCompany;

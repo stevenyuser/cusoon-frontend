@@ -9,7 +9,7 @@ import { ArrowsRightLeftIcon } from '@heroicons/react/24/outline';
 import BusRouteCard from "../components/BusRouteCard";
 
 async function getAverageRating(busCompanyId: BusCompanyIdEnum) {
-  const res = await fetch(`http://cusoon-backend.vercel.app/api/companies/${busCompanyId}/averageRating/`);
+  const res = await fetch(`https://cusoon-backend.vercel.app/api/companies/${busCompanyId}/averageRating/`);
   const data = await res.json();
   const averageRating: number = data.data;
 
@@ -46,7 +46,7 @@ async function getBusRoutes(origin: GeneralLocations, destination: GeneralLocati
 
   console.log("DateString: " + dateString);
 
-  const res = await fetch("http://cusoon-backend.vercel.app/api/routes", {
+  const res = await fetch("https://cusoon-backend.vercel.app/api/routes", {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
